@@ -14,5 +14,8 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/KiKiKi-KiKi/simple-frontend/issues"
+  },
+  "engines": {
+    "node": "^18.9.0"
   }
 }
