@@ -6,10 +6,12 @@
 /root
  |- /project ... development
  |   |- /public ... static files
- |   |- /styles ... css
  |   |- /src ... js
+ |   |   |- /styles ... css
  |   |- index.html ... entry point
  |- .node-version ... fix node versions
+ |- tsconfig.json
+ |- vite.config.json
  |- README.md
 ```
 
@@ -44,6 +46,14 @@ Access `http://localhost:3000/`
 ```sh
 # format & lint
 $ npm run format
+```
+
+### Preview static site
+
+You can check the built static site.
+
+```sh
+$ npm run preview
 ```
 
 ---
