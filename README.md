@@ -19,12 +19,15 @@
 $ npm run build
 ```
 
+Output the building files to `dist` directory.
+
 ## :dragon: Development
 
 ### Setup
 
 ```sh
 $ cp .vscode/settings.json.sample .vscode/settings.json
+$ cp .env.sample .env
 $ npm install
 ```
 
@@ -42,6 +45,30 @@ Access `http://localhost:3000/`
 # format & lint
 $ npm run format
 ```
+
+---
+
+## `.env`
+
+> To prevent accidentally leaking env variables to the client, only variables prefixed with VITE\_ are exposed to your Vite-processed code. e.g. for the following env variables:
+
+`.env`
+
+```config
+VITE_SOME_KEY=123
+DB_PASSWORD=foobar
+```
+
+> Only VITE_SOME_KEY will be exposed as import.meta.env.VITE_SOME_KEY to your client source code, but DB_PASSWORD will not.
+
+```js
+console.log(import.meta.env.VITE_SOME_KEY); // 123
+console.log(import.meta.env.DB_PASSWORD); // undefined
+```
+
+cf. https://vitejs.dev/guide/env-and-mode.html#env-variables-and-modes
+
+---
 
 ## Multi-Page App
 

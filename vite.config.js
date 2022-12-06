@@ -9,6 +9,7 @@ const PROJECT_DIR = resolve(__dirname, 'project/');
 export default defineConfig({
   root: 'project',
   base: '/',
+  envDir: '../',
   publicDir: 'public',
   build: {
     outDir: '../dist',

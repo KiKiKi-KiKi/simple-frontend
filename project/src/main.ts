@@ -2,6 +2,10 @@ import '@/styles/style.css';
 import { setupCounter } from '@/counter';
 import typescriptLogo from '@/typescript.svg';
 
+console.log(import.meta.env);
+console.log(import.meta.env.VITE_SOME_KEY); // 123
+console.log(import.meta.env.DB_PASSWORD); // undefined
+
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">
