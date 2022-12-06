@@ -1,0 +1,23 @@
+{
+  "plugins": ["stylelint-prettier"],
+  "extends": [
+    "stylelint-config-recommended",
+    "stylelint-config-standard",
+    "stylelint-config-recess-order",
+    "stylelint-prettier/recommended",
+    "stylelint-config-prettier"
+  ],
+  "ignoreFiles": ["normalize.css"],
+  "rules": {
+    "prettier/prettier": true,
+    "font-family-no-missing-generic-family-keyword": null,
+    "no-descending-specificity": null,
+    "block-no-empty": null,
+    "no-duplicate-selectors": null,
+    "font-family-no-duplicate-names": null,
+    "selector-class-pattern": null,
+    "custom-property-pattern": null,
+    "annotation-no-unknown": null,
+    "keyframes-name-pattern": null
+  }
+}
