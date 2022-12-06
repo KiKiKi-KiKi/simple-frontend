@@ -6,6 +6,11 @@
     "lib": ["ESNext", "DOM"],
     "moduleResolution": "Node",
     "strict": true,
+    "baseUrl": "./project",
+    "paths": {
+      "@/*": ["./src/*"],
+      "~/*": ["./public/*"]
+    },
     "allowJs": true,
     "resolveJsonModule": true,
     "isolatedModules": true,

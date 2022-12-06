@@ -28,5 +28,9 @@
   },
   "files.associations": {
     "*.css": "postcss"
+  },
+  "path-autocomplete.pathMappings": {
+    "@": "${folder}/project/src",
+    "~": "${folder}/project/public"
   }
 }
