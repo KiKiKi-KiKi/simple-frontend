@@ -4,11 +4,11 @@
 
 ```
 /root
- |- /public ... static files
- |   |- index.html ... entry point
- |- /src ... development
+ |- /project ... development
+ |   |- /public ... static files
  |   |- /styles
- |   |- /js
+ |   |- /src
+ |   |- index.html ... entry point
  |- .node-version ... fix node versions
  |- README.md
 ```
