@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "cleanup": "rimraf ./dist",
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "npm run cleanup && tsc && vite build",
     "preview": "vite preview",
     "lint:js": "eslint --ext .js,.jsx,.ts,.tsx project/src/",
     "lint:css": "stylelint project/**/*.css",
@@ -20,6 +21,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-unused-imports": "^2.0.0",
     "prettier": "^2.8.0",
+    "rimraf": "^3.0.2",
     "stylelint": "^14.16.0",
     "stylelint-config-prettier": "^9.0.4",
     "stylelint-config-recess-order": "^3.0.0",
