@@ -14,8 +14,19 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'unused-imports'],
   rules: {
+    '@typescript-eslint/no-unused-vars': 'off', // or "no-unused-vars": "off",
+    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-vars': [
+      'warn',
+      {
+        vars: 'all',
+        varsIgnorePattern: '^_',
+        args: 'after-used',
+        argsIgnorePattern: '^_',
+      },
+    ],
     'newline-before-return': 'error',
     'no-console': 'warn',
     'no-var': 'error',
