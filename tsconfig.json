@@ -5,6 +5,7 @@
     "module": "ESNext",
     "lib": ["ESNext", "DOM"],
     "moduleResolution": "Node",
+    "types": ["node"],
     "strict": true,
     "baseUrl": "./project",
     "paths": {
