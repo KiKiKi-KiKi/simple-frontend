@@ -6,8 +6,8 @@
 /root
  |- /project ... development
  |   |- /public ... static files
- |   |- /styles
- |   |- /src
+ |   |- /styles ... css
+ |   |- /src ... js
  |   |- index.html ... entry point
  |- .node-version ... fix node versions
  |- README.md
