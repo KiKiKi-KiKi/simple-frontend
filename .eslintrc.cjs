@@ -15,5 +15,15 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint'],
-  rules: {},
+  rules: {
+    'newline-before-return': 'error',
+    'no-console': 'warn',
+    'no-var': 'error',
+    'no-dupe-class-members': 'error',
+    'object-shorthand': ['error', 'always'],
+    'prefer-arrow-callback': 'error',
+    'prefer-const': 'error',
+    'prefer-spread': 'error',
+    'require-yield': 'error',
+  },
 };
