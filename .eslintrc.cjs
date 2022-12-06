@@ -14,7 +14,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'unused-imports'],
+  plugins: ['@typescript-eslint', 'unused-imports', 'import'],
   rules: {
     '@typescript-eslint/no-unused-vars': 'off', // or "no-unused-vars": "off",
     'unused-imports/no-unused-imports': 'error',
@@ -25,6 +25,40 @@ module.exports = {
         varsIgnorePattern: '^_',
         args: 'after-used',
         argsIgnorePattern: '^_',
+      },
+    ],
+    'import/order': [
+      'error',
+      {
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          ['parent', 'sibling'],
+          'object',
+          'type',
+          'index',
+        ],
+        'newlines-between': 'always',
+        pathGroupsExcludedImportTypes: ['builtin'],
+        alphabetize: { order: 'asc', caseInsensitive: true },
+        pathGroups: [
+          {
+            pattern: '{@/libs,@/features,@/app}',
+            group: 'internal',
+            position: 'before',
+          },
+          {
+            pattern: '{@/components,@/pages}',
+            group: 'internal',
+            position: 'before',
+          },
+          {
+            pattern: '{@/**/*.css, *.css}',
+            group: 'index',
+            position: 'after',
+          },
+        ],
       },
     ],
     'newline-before-return': 'error',
